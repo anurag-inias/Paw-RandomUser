@@ -6,6 +6,9 @@ const RandomUserValue = function () {
     this.evaluate = function () {
         return getObject(users[getRandomInt()], this.fieldType);
     }
+    this.title = function() {
+        return `Random ${this.fieldType}`;
+    }
 }
 
 function getRandomInt() {
