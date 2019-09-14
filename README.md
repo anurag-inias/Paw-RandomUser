@@ -1,22 +1,7 @@
 ## About
-A [Paw](https://paw.cloud/) extension to generate [random user](https://randomuser.me/) values.
+A [Paw](https://paw.cloud/) extension to generate [random users](https://randomuser.me/) data.
 
-This extension contains 5000 random user profiles taken from open source project [randomuser.me](https://randomuser.me/).
-
-
-## Refresh Data
-
-If you want to change the pre-packaged user data in this extension, then follow the steps below:
-
-1. In `Preferences ‣ Extensions ‣ Open Extensions Directory ‣ dev.anuragsaini.dev.anuragsaini.RandomUserValue`
-2. Make `update-data.sh` executable. 
-```Shell
-$ chmod +x update-data.sh
-```
-3. Run `update.data.sh`
-```Shell
-$ ./update-data.sh
-```
+This extension contains 5000 random user profiles taken from project [randomuser.me](https://randomuser.me/).
 
 ## Example
 

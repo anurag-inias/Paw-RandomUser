@@ -1,13 +1,13 @@
-const json = require('./randomUsers.js');
+const json = require('./data.js');
 const users = json.results;
 const MAX = users.length;
 
-const RandomUserValue = function () {
+const RandomUser = function () {
     this.evaluate = function () {
         return getObject(users[getRandomInt()], this.fieldType);
     }
     this.title = function() {
-        return `Random ${this.fieldType}`;
+        return this.fieldType ? `Random ${this.fieldType}` : 'Choose field';
     }
 }
 
@@ -52,15 +52,15 @@ function buildSelectOptions() {
 
 
 
-RandomUserValue.identifier = "dev.anuragsaini.RandomUserValue";
-RandomUserValue.title = "Random User Value";
-RandomUserValue.help = "https://randomuser.me/documentation";
+RandomUser.identifier = "dev.anuragsaini.RandomUser";
+RandomUser.title = "Random User";
+RandomUser.help = "https://randomuser.me/documentation";
 
-RandomUserValue.inputs = [
+RandomUser.inputs = [
     InputField("fieldType", "Field Type", "Select", {
         persisted: true,
         choices: buildSelectOptions()
     })
 ];
 
-registerDynamicValueClass(RandomUserValue);
+registerDynamicValueClass(RandomUser);
